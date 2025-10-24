@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://c2e067c8557vm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -203.0
+offset_top = -120.0
+offset_right = 203.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "FUNNY 
+FONT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Color" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Color
+Change"
+
+[node name="Text" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Text
+Swap"
+
+[node name="Increase" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Font
+Increase"
+
+[node name="Decrease" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Font 
+Decrease"
+
+[node name="Reset" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Reset"

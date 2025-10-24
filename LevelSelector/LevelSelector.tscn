@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://lt1gap5odb71"]
+[gd_scene load_steps=3 format=3 uid="uid://lt1gap5odb71"]
 
 [ext_resource type="Texture2D" uid="uid://67ky4dyclb6l" path="res://icon.svg" id="1_no4y0"]
+[ext_resource type="Script" uid="uid://b2ilvv012h7ic" path="res://LevelSelector/level_selector.gd" id="1_xgsb3"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xgsb3")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -52,3 +54,5 @@ layout_mode = 2
 text = "PLACE
 HOLD"
 icon = ExtResource("1_no4y0")
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_button_button_up_font"]
