@@ -1,12 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c2e067c8557vm"]
 
-[sub_resource type="GDScript" id="GDScript_3et6i"]
-script/source = "extends Control
-
-func _on_back_to_menu_button_up() -> void:
-	var BackToMenu = load(\"res://LevelSelector/LevelSelector.tscn\")
-	get_tree().change_scene_to_packed(BackToMenu)
-"
+[ext_resource type="Script" uid="uid://c2ah0gd1bnfl3" path="res://FunnyFont/funny_font.gd" id="1_qy6tp"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("GDScript_3et6i")
+script = ExtResource("1_qy6tp")
 
 [node name="Menu" type="MarginContainer" parent="."]
 layout_mode = 1

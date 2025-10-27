@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc5aj4y6e78kw"]
+
+[ext_resource type="Script" uid="uid://dpq6q6mrp7fhb" path="res://RockPaperScissors/rock_paper_scissors.gd" id="1_17rw1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_17rw1")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+text = "Back to menu"
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up_BackToMenu"]

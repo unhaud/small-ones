@@ -56,4 +56,5 @@ HOLD"
 icon = ExtResource("1_no4y0")
 
 [connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/Font" to="." method="_on_button_button_up_font"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer2/RockPaperScissors" to="." method="RockPaperScissors"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer2/RockPaperScissors" to="." method="_on_rock_paper_scissors_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer3/Placeholder" to="." method="_on_placeholder_button_up"]
