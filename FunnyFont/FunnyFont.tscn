@@ -84,4 +84,5 @@ layout_mode = 2
 text = "Menu"
 
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Color" to="." method="_on_color_ShowColorPicker"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Text" to="." method="_on_text_swap_button_up"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/BackToMenu" to="." method="_on_back_to_menu_button_up"]

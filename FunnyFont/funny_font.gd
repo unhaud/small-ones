@@ -2,6 +2,12 @@ extends Control
 
 @onready var label = $Label
 
+
+func _on_back_to_menu_button_up() -> void:
+	var BackToMenu = load("res://LevelSelector/LevelSelector.tscn")
+	get_tree().change_scene_to_packed(BackToMenu)
+
+
 func _on_color_ShowColorPicker() -> void:
 	var color_picker = ColorPicker.new()
 	var popup = Popup.new()
@@ -19,6 +25,6 @@ func _on_color_ShowColorPicker() -> void:
 func _on_color_changed(color):
 	label.add_theme_color_override("font_color", color)
 
-func _on_back_to_menu_button_up() -> void:
-	var BackToMenu = load("res://LevelSelector/LevelSelector.tscn")
-	get_tree().change_scene_to_packed(BackToMenu)
+
+func _on_text_swap_button_up() -> void:
+	label.text = "TEXT SWAPPED"
