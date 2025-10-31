@@ -83,4 +83,5 @@ text = "Menu"
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Color" to="." method="_on_color_ShowColorPicker"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Text" to="." method="_on_text_swap_button_up"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Increase" to="." method="_on_increase_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Decrease" to="." method="_on_decrease_button_up"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/BackToMenu" to="." method="_on_back_to_menu_button_up"]

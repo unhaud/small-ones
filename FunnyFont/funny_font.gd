@@ -33,3 +33,8 @@ func _on_text_swap_button_up() -> void:
 func _on_increase_button_up() -> void:
 	var current_size = label.get_theme_font_size("font_size")
 	label.add_theme_font_size_override("font_size", current_size + 2)
+
+
+func _on_decrease_button_up() -> void:
+	var current_size = label.get_theme_font_size("font_size")
+	label.add_theme_font_size_override("font_size", current_size - 2)
