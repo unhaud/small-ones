@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://g0buiqtkgd4u"]
+
+[ext_resource type="Script" uid="uid://co461vpf8dvll" path="res://placeholder.gd" id="1_a3njk"]
+
+[node name="BackToMenu" type="HBoxContainer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+script = ExtResource("1_a3njk")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Back To Menu"
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

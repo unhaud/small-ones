@@ -30,7 +30,7 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Font" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "FUNNY 
 FONT"
@@ -39,7 +39,7 @@ icon = ExtResource("1_no4y0")
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="RockPaperScissors" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 text = "ROCK &
 PAPER &
@@ -49,10 +49,12 @@ icon = ExtResource("1_no4y0")
 [node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="Placeholder" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 text = "PLACE
 HOLD"
 icon = ExtResource("1_no4y0")
 
-[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_button_button_up_font"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/Font" to="." method="_on_button_button_up_font"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer2/RockPaperScissors" to="." method="_on_rock_paper_scissors_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer3/Placeholder" to="." method="_on_placeholder_button_up"]

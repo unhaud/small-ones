@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc5aj4y6e78kw"]
+
+[ext_resource type="Script" uid="uid://dpq6q6mrp7fhb" path="res://RockPaperScissors/rock_paper_scissors.gd" id="1_17rw1"]
+[ext_resource type="PackedScene" uid="uid://g0buiqtkgd4u" path="res://placeholder.tscn" id="2_7qjnr"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_17rw1")
+
+[node name="BackToMenu" parent="." instance=ExtResource("2_7qjnr")]
+layout_mode = 1

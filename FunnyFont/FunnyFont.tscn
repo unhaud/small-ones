@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://c2e067c8557vm"]
+[gd_scene load_steps=3 format=3 uid="uid://c2e067c8557vm"]
+
+[ext_resource type="Script" uid="uid://c2ah0gd1bnfl3" path="res://FunnyFont/funny_font.gd" id="1_qy6tp"]
+[ext_resource type="PackedScene" uid="uid://g0buiqtkgd4u" path="res://placeholder.tscn" id="2_pjfbu"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,24 +10,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qy6tp")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -203.0
-offset_top = -120.0
-offset_right = 203.0
-offset_bottom = 120.0
+anchors_preset = -1
+anchor_left = 0.3237847
+anchor_top = 0.3148148
+anchor_right = 0.6762153
+anchor_bottom = 0.6851852
 grow_horizontal = 2
 grow_vertical = 2
 text = "FUNNY 
 FONT"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -60,3 +61,20 @@ Decrease"
 [node name="Reset" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Reset"
+
+[node name="BackToMenu" type="Button" parent="VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "Back to menu"
+
+[node name="BackToMenu" parent="." instance=ExtResource("2_pjfbu")]
+layout_mode = 1
+
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Color" to="." method="_on_color_ShowColorPicker"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Text" to="." method="_on_text_swap_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Increase" to="." method="_on_increase_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Decrease" to="." method="_on_decrease_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Reset" to="." method="_on_reset_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/BackToMenu" to="." method="_on_back_to_menu_button_up"]
