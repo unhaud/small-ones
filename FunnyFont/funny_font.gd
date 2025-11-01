@@ -2,8 +2,8 @@ extends Control
 
 @onready var label = $Label
 
-
 func _on_back_to_menu_button_up() -> void:
+	print ("tell me")
 	var BackToMenu = load("res://LevelSelector/LevelSelector.tscn")
 	get_tree().change_scene_to_packed(BackToMenu)
 
@@ -38,3 +38,7 @@ func _on_increase_button_up() -> void:
 func _on_decrease_button_up() -> void:
 	var current_size = label.get_theme_font_size("font_size")
 	label.add_theme_font_size_override("font_size", current_size - 2)
+
+
+func _on_reset_button_up() -> void:
+	get_tree().reload_current_scene()

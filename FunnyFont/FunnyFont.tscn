@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2e067c8557vm"]
+[gd_scene load_steps=3 format=3 uid="uid://c2e067c8557vm"]
 
 [ext_resource type="Script" uid="uid://c2ah0gd1bnfl3" path="res://FunnyFont/funny_font.gd" id="1_qy6tp"]
+[ext_resource type="PackedScene" uid="uid://g0buiqtkgd4u" path="res://placeholder.tscn" id="2_pjfbu"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,21 +11,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qy6tp")
-
-[node name="Menu" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -114.0
-offset_top = -1.0
-offset_right = -1.0
-offset_bottom = 90.0
-grow_horizontal = 0
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -77,11 +63,18 @@ layout_mode = 2
 text = "Reset"
 
 [node name="BackToMenu" type="Button" parent="VBoxContainer/HBoxContainer"]
+visible = false
 layout_mode = 2
-text = "Menu"
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "Back to menu"
+
+[node name="BackToMenu" parent="." instance=ExtResource("2_pjfbu")]
+layout_mode = 1
 
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Color" to="." method="_on_color_ShowColorPicker"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Text" to="." method="_on_text_swap_button_up"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Increase" to="." method="_on_increase_button_up"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/Decrease" to="." method="_on_decrease_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/Reset" to="." method="_on_reset_button_up"]
 [connection signal="button_up" from="VBoxContainer/HBoxContainer/BackToMenu" to="." method="_on_back_to_menu_button_up"]
