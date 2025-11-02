@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dc5aj4y6e78kw"]
+[gd_scene load_steps=4 format=3 uid="uid://dc5aj4y6e78kw"]
 
 [ext_resource type="Script" uid="uid://dpq6q6mrp7fhb" path="res://RockPaperScissors/rock_paper_scissors.gd" id="1_17rw1"]
 [ext_resource type="PackedScene" uid="uid://g0buiqtkgd4u" path="res://placeholder.tscn" id="2_7qjnr"]
+[ext_resource type="Texture2D" uid="uid://67ky4dyclb6l" path="res://icon.svg" id="3_nphnv"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,3 +15,66 @@ script = ExtResource("1_17rw1")
 
 [node name="BackToMenu" parent="." instance=ExtResource("2_7qjnr")]
 layout_mode = 1
+
+[node name="ChoiceDisplay" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 51.0
+offset_right = 337.0
+offset_bottom = 311.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ChoiceDisplay"]
+layout_mode = 2
+
+[node name="PlayerDisplay" type="TextureRect" parent="ChoiceDisplay/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_nphnv")
+
+[node name="ComputerDisplay" type="TextureRect" parent="ChoiceDisplay/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_nphnv")
+
+[node name="Buttons" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -334.0
+offset_right = 480.0
+offset_bottom = -138.0
+grow_vertical = 0
+columns = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Buttons"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Buttons/MarginContainer"]
+layout_mode = 2
+
+[node name="Rock" type="Button" parent="Buttons/MarginContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_nphnv")
+
+[node name="Paper" type="Button" parent="Buttons/MarginContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_nphnv")
+
+[node name="Scissors" type="Button" parent="Buttons/MarginContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_nphnv")
+
+[node name="ResultLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 44.0
+offset_top = -406.0
+offset_right = 387.0
+offset_bottom = -383.0
+grow_vertical = 0
+text = "WHICH ONE ARE YOU GOING TO CHOOSE?"
