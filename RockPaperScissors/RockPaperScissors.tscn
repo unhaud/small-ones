@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dc5aj4y6e78kw"]
+[gd_scene load_steps=7 format=3 uid="uid://dc5aj4y6e78kw"]
 
 [ext_resource type="Script" uid="uid://dpq6q6mrp7fhb" path="res://RockPaperScissors/rock_paper_scissors.gd" id="1_17rw1"]
 [ext_resource type="PackedScene" uid="uid://g0buiqtkgd4u" path="res://placeholder.tscn" id="2_7qjnr"]
-[ext_resource type="Texture2D" uid="uid://67ky4dyclb6l" path="res://icon.svg" id="3_nphnv"]
+[ext_resource type="Texture2D" uid="uid://dxpb1pbwm0qon" path="res://RockPaperScissors/Art/unknown.png" id="3_k1n7o"]
+[ext_resource type="Texture2D" uid="uid://i2n7x1ua41xa" path="res://RockPaperScissors/Art/rock.jpg" id="4_g5wir"]
+[ext_resource type="Texture2D" uid="uid://dskux0sj8tdkh" path="res://RockPaperScissors/Art/paper.jpg" id="5_3supi"]
+[ext_resource type="Texture2D" uid="uid://qmeruat3ba4m" path="res://RockPaperScissors/Art/scissors.jpg" id="6_exmsn"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -28,11 +31,11 @@ layout_mode = 2
 
 [node name="PlayerDisplay" type="TextureRect" parent="ChoiceDisplay/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_nphnv")
+texture = ExtResource("3_k1n7o")
 
 [node name="ComputerDisplay" type="TextureRect" parent="ChoiceDisplay/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_nphnv")
+texture = ExtResource("3_k1n7o")
 
 [node name="Buttons" type="GridContainer" parent="."]
 layout_mode = 1
@@ -57,15 +60,15 @@ layout_mode = 2
 
 [node name="Rock" type="Button" parent="Buttons/MarginContainer/HBoxContainer"]
 layout_mode = 2
-icon = ExtResource("3_nphnv")
+icon = ExtResource("4_g5wir")
 
 [node name="Paper" type="Button" parent="Buttons/MarginContainer/HBoxContainer"]
 layout_mode = 2
-icon = ExtResource("3_nphnv")
+icon = ExtResource("5_3supi")
 
 [node name="Scissors" type="Button" parent="Buttons/MarginContainer/HBoxContainer"]
 layout_mode = 2
-icon = ExtResource("3_nphnv")
+icon = ExtResource("6_exmsn")
 
 [node name="ResultLabel" type="Label" parent="."]
 layout_mode = 1
