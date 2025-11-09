@@ -81,3 +81,7 @@ offset_right = 387.0
 offset_bottom = -383.0
 grow_vertical = 0
 text = "WHICH ONE ARE YOU GOING TO CHOOSE?"
+
+[connection signal="button_up" from="Buttons/MarginContainer/HBoxContainer/Rock" to="." method="_on_rock_button_up"]
+[connection signal="button_up" from="Buttons/MarginContainer/HBoxContainer/Paper" to="." method="_on_paper_button_up"]
+[connection signal="button_up" from="Buttons/MarginContainer/HBoxContainer/Scissors" to="." method="_on_scissors_button_up"]
